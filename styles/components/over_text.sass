@@ -1,0 +1,21 @@
+@import "../colours/base.sass"
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700)
+$roboto-slab: 'Roboto Slab', serif
+$open-sans: 'Open Sans', sans-serif
+
+%defaults
+  margin: 0px
+  padding: 0px
+  top: 0
+  left: 0
+
+.text
+  &__header
+    position: fixed
+    top: 75%
+    &-text
+      font-family: $roboto-slab
+      color: $white
+      font-size: 7em
+      text-align: center
+      text-shadow: 1px 1px 1px $base
