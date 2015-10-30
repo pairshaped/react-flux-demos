@@ -25,7 +25,7 @@ module.exports = {
       "jsonp": "superagent-jsonp",
       "superagent": "superagent",
       "React": "react/addons",
-      "Flux": "flux",
+      "Reflux": "reflux",
       "_": "lodash",
       "Bemmer": "bemmer-node/bemmer-class"
     })

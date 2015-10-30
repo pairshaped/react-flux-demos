@@ -1,5 +1,5 @@
-ImageDispatcher = require("../dispatcher.coffee")
-{EventEmitter} = require("events")
+Reflux = require('reflux')
+
 ImageActions = require("../actions/image_actions.coffee")
 
 ImageModel = require("../models/image.coffee")
@@ -16,36 +16,14 @@ state =
 mapPicturesToModelArray = (data) ->
   _.map data, (image) -> new ImageModel(image)
 
-class ImageStore extends EventEmitter.prototype
+module.exports = Reflux.createStore
+  listenables: [ImageActions]
 
-  @getState: ->
-    state
-
-  @emitChange: ->
-    @emit(CHANGE_EVENT)
-
-  @addChangeListener: (cb) ->
-    @on(CHANGE_EVENT, cb)
-
-  @removeChangeListener: (cb) ->
-    @removeListener(CHANGE_EVENT, cb)
-
-  @fetchData: (tag = 'pears') ->
+  fetchData: (tag = 'pears') ->
     superagent
       .get("#{ENDPOINT}/#{tag.split(" ").join('')}/#{POST_QUERY}#{API_KEY}")
       .use(jsonp)
       .end((err, res) =>
-          ImageActions.recieveDataFromAjax(res.body.data))
-
-  @_dispatchHandler: (payload) ->
-    switch payload.actionType
-      when "set-pictures"
-        state.pictures = mapPicturesToModelArray(payload.data)
-        ImageStore.emitChange()
-      when "get-pictures"
-        state.pictures = []
-        ImageStore.fetchData(payload.image_term)
-
-  dispatchToken: ImageDispatcher.register(ImageStore._dispatchHandler)
-
-module.exports = ImageStore
+        state = mapPicturesToModelArray(res.body.data)
+        @trigger state
+      )

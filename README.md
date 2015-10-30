@@ -1,4 +1,4 @@
-# Intro to Flux Master branch of ReactFluxDemos.
+# Intro to Reflux branch of ReactFluxDemos.
 A simple Instagram Flux app.
 
 ---------------------
@@ -9,6 +9,13 @@ A simple Instagram Flux app.
 - [Fluxxor](https://github.com/pairshaped/react-flux-demos/tree/fluxxor)
 - [McFly](https://github.com/pairshaped/react-flux-demos/tree/mcfly)
 - [Redux](https://github.com/pairshaped/react-flux-demos/tree/redux)
+
+---------------------
+### Reflux
+The best information can be found here:
+- [Reflux](https://github.com/spoike/refluxjs)
+- [CoffeeScript with
+  Reflux](https://github.com/iroy2000/react-reflux-boilerplate-with-webpack/)
 
 ---------------------
 ### Flux

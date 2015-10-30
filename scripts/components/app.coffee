@@ -4,25 +4,20 @@
 {PictureContainer} = require("./images/index")
 {Search} = require("./search_box/index")
 ImageActions = require('../actions/image_actions.coffee')
+ImageStore = require('../stores/image_store')
+
+Reflux = require('reflux')
 
 module.exports = React.createFactory React.createClass
   displayName: "ImageApp"
 
+  mixins: [Reflux.connect(ImageStore, 'pictures')]
+
   getInitialState: ->
     pictures: []
 
-  handleImageStoreChange: ->
-    newState = @props.ImageStore.getState()
-    @setState newState
-
-  componentWillMount: ->
-    @props.ImageStore.addChangeListener @handleImageStoreChange
-
   componentDidMount: ->
-    ImageActions.getImages()
-
-  componentWillUnmount: ->
-    @props.ImageStore.removeChangeListener @handleImageStoreChange
+    ImageActions.fetchData()
 
   render: ->
     div {},

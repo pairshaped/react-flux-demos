@@ -8,7 +8,7 @@ module.exports = React.createFactory React.createClass
   displayName: "Search"
 
   handleSearchKeyUp: (e) ->
-      ImageActions.getImages(e.target.value)
+      ImageActions.fetchData(e.target.value)
 
   render: ->
     bem = new Bemmer(block: 'search')
