@@ -1,14 +1,15 @@
 { div, input } = React.DOM
 
-ImageActions = require('../../actions/image_actions.coffee')
+FluxMixin = Fluxxor.FluxMixin(React)
 
-timer = null
 
 module.exports = React.createFactory React.createClass
   displayName: "Search"
 
+  mixins: [FluxMixin]
+
   handleSearchKeyUp: (e) ->
-      ImageActions.getImages(e.target.value)
+    @getFlux().actions.getImages(e.target.value)
 
   render: ->
     bem = new Bemmer(block: 'search')

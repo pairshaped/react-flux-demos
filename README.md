@@ -1,4 +1,4 @@
-# Intro to Flux Master branch of ReactFluxDemos.
+# Intro to Fluxxor branch of ReactFluxDemos.
 A simple Instagram Flux app.
 
 ---------------------
@@ -9,6 +9,12 @@ A simple Instagram Flux app.
 - [Fluxxor](https://github.com/pairshaped/react-flux-demos/tree/fluxxor)
 - [McFly](https://github.com/pairshaped/react-flux-demos/tree/mcfly)
 - [Redux](https://github.com/pairshaped/react-flux-demos/tree/redux)
+
+---------------------
+### Fluxxor
+The best information can be found here:
+- [Fluxxor Guides](http://fluxxor.com/guides/quick-start.html)
+- [Fluxxor Github](https://github.com/BinaryMuse/fluxxor)
 
 ---------------------
 ### Flux

@@ -4,25 +4,25 @@
 {PictureContainer} = require("./images/index")
 {Search} = require("./search_box/index")
 ImageActions = require('../actions/image_actions.coffee')
+Fluxxor = require('fluxxor')
+FluxMixin = Fluxxor.FluxMixin(React)
+storeWatchMixin = Fluxxor.StoreWatchMixin
 
 module.exports = React.createFactory React.createClass
   displayName: "ImageApp"
 
-  getInitialState: ->
-    pictures: []
+  mixins: [FluxMixin, storeWatchMixin("ImageStore")]
 
-  handleImageStoreChange: ->
-    newState = @props.ImageStore.getState()
-    @setState newState
+  getStateFromFlux: ->
+    flux = @getFlux()
+    flux.store("ImageStore").getState()
 
   componentWillMount: ->
-    @props.ImageStore.addChangeListener @handleImageStoreChange
+    @getFlux().actions.getImages()
+    @getStateFromFlux()
 
   componentDidMount: ->
-    ImageActions.getImages()
-
-  componentWillUnmount: ->
-    @props.ImageStore.removeChangeListener @handleImageStoreChange
+    @getStateFromFlux()
 
   render: ->
     div {},
