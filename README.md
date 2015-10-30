@@ -1,4 +1,4 @@
-Intro to Flux Master branch of ReactFluxDemos.
+# Intro to Flux Master branch of ReactFluxDemos.
 A simple Instagram Flux app.
 
 ---------------------
