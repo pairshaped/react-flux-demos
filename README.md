@@ -1,4 +1,4 @@
-# Intro to Flux Master branch of ReactFluxDemos.
+# Intro to McFly branch of ReactFluxDemos.
 A simple Instagram Flux app.
 
 ---------------------
@@ -10,6 +10,11 @@ A simple Instagram Flux app.
 - [McFly](https://github.com/pairshaped/react-flux-demos/tree/mcfly)
 - [Redux](https://github.com/pairshaped/react-flux-demos/tree/redux)
 
+---------------------
+### McFly
+The best information can be found here:
+- [McFly](https://github.com/kenwheeler/mcfly)
+- [Flux shopping cart demos](https://github.com/voronianski/flux-comparison/blob/master/mcfly)
 ---------------------
 ### Flux
 The best information can be found here:

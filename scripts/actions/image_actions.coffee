@@ -1,12 +1,6 @@
-ImageDispatcher = require('../dispatcher.coffee')
+mcFly = require('../mcFly/mcFly')
 
-module.exports =
+module.exports = mcFly.createActions
   getImages: (search_term = 'pears')->
-    ImageDispatcher.dispatch
       actionType: 'get-pictures'
       image_term: search_term
-
-  recieveDataFromAjax: (data) ->
-    ImageDispatcher.dispatch
-      actionType: 'set-pictures'
-      data: data
