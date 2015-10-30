@@ -9,8 +9,9 @@ module.exports = React.createFactory React.createClass
 
     div
       className: bem.with(element: 'container')
-      @props.pictures.map ((picture, idx) ->
-        Picture
-          key: idx
-          picture: picture
-          bem: bem)
+      if @props.pictures
+        _.map @props.pictures, ((picture, idx) ->
+          Picture
+            key: idx
+            picture: picture
+            bem: bem)

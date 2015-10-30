@@ -1,5 +1,6 @@
 { div } = React.DOM
 
+ReactCSSTransitionGroup = React.createFactory React.addons.CSSTransitionGroup
 HeaderText = require('./header_text.coffee')
 
 module.exports = React.createFactory React.createClass
@@ -8,5 +9,8 @@ module.exports = React.createFactory React.createClass
   render: ->
     bem = new Bemmer(block: 'text')
 
-    HeaderText
-      bem: bem
+    ReactCSSTransitionGroup
+      transitionName: "header"
+      transitionAppear: true
+      HeaderText
+        bem: bem

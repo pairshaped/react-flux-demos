@@ -1,11 +1,19 @@
 require '../styles/index'
 
-App = require("./components/app.coffee")
+ReactRedux = require('react-redux')
+Provider = ReactRedux.Provider
 
-document.addEventListener "DOMContentLoaded", (e) ->
+{store} = require('./reducers/images')
+App = require('./containers/app')
+
+addEventListener "DOMContentLoaded", (e) ->
   React.render(
-    App(
-      ImageStore: require('./stores/image_store.coffee')
+    React.createElement(Provider, {store: store},
+    () ->
+      React.createElement(App, null)
     )
     document.body
   )
+
+# Initial load
+store.dispatch('GET_PICTURES')

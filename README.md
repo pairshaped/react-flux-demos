@@ -1,4 +1,4 @@
-# Intro to Flux Master branch of ReactFluxDemos.
+# Intro to Redux Master branch of ReactFluxDemos.
 A simple Instagram Flux app.
 
 ---------------------
@@ -9,6 +9,20 @@ A simple Instagram Flux app.
 - [Fluxxor](https://github.com/pairshaped/react-flux-demos/tree/fluxxor)
 - [McFly](https://github.com/pairshaped/react-flux-demos/tree/mcfly)
 - [Redux](https://github.com/pairshaped/react-flux-demos/tree/redux)
+
+---------------------
+### Redux
+The best information can be found here:
+- [Redux](https://github.com/rackt/redux)
+- [Redux Docs](http://rackt.org/redux/docs/api/)
+- [Simplest redux example](https://github.com/jackielii/simplest-redux-example)
+- [Redux examples](https://github.com/rackt/redux/tree/master/examples)
+  - [Counter](https://github.com/rackt/redux/tree/master/examples/counter)
+  - [Async](https://github.com/rackt/redux/tree/master/examples/async)
+- [Understanding Redux
+  Middleware](https://medium.com/@meagle/understanding-87566abcfb7a#.65qhafd21)
+- ['applyMiddleware' docs](http://rackt.org/redux/docs/api/applyMiddleware.html)
+- [Redux coffee Boilerplate](https://github.com/xouabita/redux-coffee-boilerplate)
 
 ---------------------
 ### Flux
