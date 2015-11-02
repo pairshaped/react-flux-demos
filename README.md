@@ -4,11 +4,11 @@ A simple Instagram Flux app.
 ---------------------
 ### Other Flux Branches
 
-- [Pure Flux](https://github.com/whatisinternet/ReactFluxDemos/tree/flux)
-- [Reflux](https://github.com/whatisinternet/ReactFluxDemos/tree/reflux)
-- [Fluxxor](https://github.com/whatisinternet/ReactFluxDemos/tree/fluxxor)
-- [McFly](https://github.com/whatisinternet/ReactFluxDemos/tree/mcfly)
-- [Redux](https://github.com/whatisinternet/ReactFluxDemos/tree/redux)
+- [Pure Flux](https://github.com/pairshaped/ReactFluxDemos/tree/flux)
+- [Reflux](https://github.com/pairshaped/ReactFluxDemos/tree/reflux)
+- [Fluxxor](https://github.com/pairshaped/ReactFluxDemos/tree/fluxxor)
+- [McFly](https://github.com/pairshaped/ReactFluxDemos/tree/mcfly)
+- [Redux](https://github.com/pairshaped/ReactFluxDemos/tree/redux)
 
 ---------------------
 ### Flux
