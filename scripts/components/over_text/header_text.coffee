@@ -10,4 +10,4 @@ module.exports = React.createFactory React.createClass
       className: bem.with(element: 'header'),
         h1
           className: bem.with(element: 'header-text'),
-          "React.js Flux API example"
+          "React.js McFly API example"
